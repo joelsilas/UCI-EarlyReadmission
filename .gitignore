@@ -1,0 +1,7 @@
+/data
+/.venv
+/artifacts
+/catboost_info
+uv.lock
+
+*__pycache__*

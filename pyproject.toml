@@ -1,0 +1,17 @@
+[project]
+name = "readmission-research"
+version = "0.1.0"
+description = "Hospital readmission Prediction — UCI Diabetes 130-US Hospitals"
+readme = "README.md"
+authors = [
+    { name = "joel.silas", email = "joel.silas@hotmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scikit-learn>=1.5",
+    "catboost>=1.2",
+    "pyarrow>=18.0",
+    "icd-mappings>=0.5.0",
+]
