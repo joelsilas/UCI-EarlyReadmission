@@ -1,30 +1,19 @@
 # UCI-EarlyReadmission
 Aiming for Highest statistically honest, AUROC/AUPRC for the UCI Diabetes readmission dataset
 
+---
 
+## Benchmark Comparison (Statistically Honest, UCI Dataset Only)
 
+> The majority of published papers on this dataset report AUROC > 0.85 or accuracy > 92 %. These are almost universally the result of data leakage — most commonly SMOTE applied before the train/test split, encounter-level (rather than patient-level) splitting, or retaining hospice/death discharges. Only papers that clearly avoid these pitfalls are listed below.
+>
+> `—` indicates the metric was not reported. † F1 and Accuracy for Liu 2024 are measured on SMOTE-balanced evaluation folds, not the original imbalanced distribution.
 
-Results:
-====================================================================================================
-PER-SEED TEST METRICS
-====================================================================================================
-      seed      auroc      auprc  f1_class1 precision_class1 recall_class1      brier        ece  threshold
-----------------------------------------------------------------------------------------------------
-        42     0.6900     0.2414     0.3003     0.2285     0.4378     0.0945     0.0047     0.1600
-       123     0.6838     0.2409     0.3023     0.2294     0.4429     0.0979     0.0074     0.1500
-       456     0.6775     0.2335     0.2925     0.2390     0.3769     0.0941     0.0069     0.1700
-       789     0.6886     0.2333     0.2974     0.2266     0.4324     0.0951     0.0041     0.1600
-      1024     0.6722     0.2154     0.2784     0.2009     0.4532     0.0932     0.0085     0.1400
-
-====================================================================================================
-5-SEED MEAN +/- STD
-====================================================================================================
-  auroc                0.6824 +/- 0.0067
-  auprc                0.2329 +/- 0.0094
-  f1_class1            0.2942 +/- 0.0086
-  precision_class1     0.2249 +/- 0.0127
-  recall_class1        0.4286 +/- 0.0268
-  brier                0.0950 +/- 0.0016
-  ece                  0.0063 +/- 0.0017
-  threshold            0.1560 +/- 0.0102
-====================================================================================================
+| Name / Paper | Best Model | AUROC | AUPRC | Accuracy | F1 (minority) |
+|---|---|:---:|:---:|:---:|:---:|
+| **Ours (5-seed mean ± std)** | **(see Results)** | **0.6824 ± 0.0067** | **0.2329 ± 0.0094** | **—** | **0.2942 ± 0.0086** |
+| Emi-Johnson & Nkrumah, *Cureus* (2025) | XGBoost | 0.667 | — | — | — |
+| Liu et al., *J Med Artif Intel* (2024) | XGBoost + GWO | 0.64 | — | 0.88† | 0.84† |
+| Shang et al., *BMC Med Inform* (2021) | Random Forest | 0.640 | — | — | — |
+| Bhuvan et al., arXiv:1602.04257 (2016) | AdaBoost | 0.63 | — | — | — |
+| Strack et al., *BioMed Res. Int---
