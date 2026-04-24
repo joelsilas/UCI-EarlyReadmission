@@ -11,7 +11,7 @@ Aiming for Highest statistically honest, AUROC/AUPRC for the UCI Diabetes readmi
 
 | Name / Paper | Best Model | AUROC | AUPRC | Accuracy | F1 (minority) |
 |---|---|:---:|:---:|:---:|:---:|
-| **Ours (5-seed mean ± std)** | **(see Results)** | **0.6824 ± 0.0067** | **0.2329 ± 0.0094** | **—** | **0.2942 ± 0.0086** |
+| **Me** | **Catboost Ensemble** | **0.6824 ± 0.0067** | **0.2329 ± 0.0094** | **—** | **0.2942 ± 0.0086** |
 | Emi-Johnson & Nkrumah, *Cureus* (2025) | XGBoost | 0.667 | — | — | — |
 | Liu et al., *J Med Artif Intel* (2024) | XGBoost + GWO | 0.64 | — | 0.88† | 0.84† |
 | Shang et al., *BMC Med Inform* (2021) | Random Forest | 0.640 | — | — | — |
